@@ -9,10 +9,16 @@
 
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="index.php">
+          <li class="nav-item active">
+            <a class="nav-link" href="calendar.php">
               <i class="material-icons">dashboard</i>
               <p>CRS</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="material-icons">bookmark_add</i>
+              <p>Bookings CARSฺ</p>
             </a>
           </li>
         </ul>
