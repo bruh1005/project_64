@@ -47,7 +47,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
-              <i class="material-icons">directions_walk</i>
+              <i class="material-icons">directions_bike</i>
               <p>TABLE DRIVERS</p>
             </a>
           </li>

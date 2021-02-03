@@ -29,7 +29,7 @@ $res=$conn->query($sql);
                 <h4 class="card-title ">TABLE Profile</h4>
             </div>
            
-            <div class="card-body">
+            <div class="card-body ">
                 <div class="table-responsive">
                 <table id="example" class="table table-striped table-bordered" >
                 <thead class=" text-primary">
