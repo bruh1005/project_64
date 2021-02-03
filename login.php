@@ -50,8 +50,8 @@ include("css.php");
                         <a href="register.php" align="right"><input type="button" value="สมัครสมาชิก" class="btn btn-warning"></a>
                         </div>
                         </form>
-                        
-                        <br></div>
+                        <br>
+                    </div>
                     </div>
                 </div>
 
