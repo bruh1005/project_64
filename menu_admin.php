@@ -16,9 +16,15 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="calendar.php">
+            <a class="nav-link" href="#">
               <i class="material-icons">event</i>
               <p>Calendar</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">person_add</i>
+              <p>INSERT USER</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -28,13 +34,19 @@
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">design_services</i>
+              <p>INSERT CARS</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="tablecars.php">
               <i class="material-icons">directions_bus_filled</i>
               <p>TABLE CARS</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="tableuser.php">
+            <a class="nav-link" href="#">
               <i class="material-icons">directions_walk</i>
               <p>TABLE DRIVERS</p>
             </a>

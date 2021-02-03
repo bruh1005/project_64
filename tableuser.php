@@ -6,20 +6,8 @@ include('script.php');
  
 $sql="SELECT * FROM user ";
 $res=$conn->query($sql);
-
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
     <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -43,6 +31,8 @@ $res=$conn->query($sql);
                         <th>Lname</th>
                         <th>Telephone</th>
                         <th>Status</th>
+                        <th>Edit</th>
+                        <th>Delect</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,6 +57,17 @@ $res=$conn->query($sql);
                         <td><?php echo $row['lname']; ?></td>
                         <td><?php echo $row['phone']; ?></td>
                         <td><?php echo $row['status']; ?></td>
+                        <td><a href="edit_std_f.jsp?user_id=<?php echo $row['user_id']; ?>">
+                            <button class="btn btn-info" type="submit">
+                            <i class="material-icons">mode</i>
+                            EDIT</button></a>
+                        </td>
+                        <td><a href="delect_user.php?user_id=<?php echo $row['user_id']; ?>">
+                            <button class="btn btn-danger" type="submit">
+                            <i class="material-icons">delete_forever</i>
+                            DELECT</button></a>
+                        </td>
+                    
                       
                     </tr>
                     <?php } ?>
