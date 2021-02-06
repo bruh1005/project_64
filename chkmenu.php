@@ -6,6 +6,9 @@ session_start();
     if($_SESSION['status']=='user') {
         include("menu_user.php");
     }
+    if($_SESSION['status']=='driver') {
+        include("menu_driver.php");
+    }
     if($_SESSION['status']=='') {
         ?>
         <script>

@@ -18,37 +18,37 @@
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">event</i>
-              <p>Calendar</p>
+              <p>ตารางการจองรถ</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">person_add</i>
-              <p>INSERT USER</p>
+              <p>เพิ่มข้อมูลสมาชิก</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="tableuser.php">
               <i class="material-icons">contact_page</i>
-              <p>TABLE USER</p>
+              <p>ตารางข้อมูลสมาชิก</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">design_services</i>
-              <p>INSERT CARS</p>
+              <p>เพิ่มข้อมูลรถ</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="tablecars.php">
               <i class="material-icons">directions_bus_filled</i>
-              <p>TABLE CARS</p>
+              <p>ตารางข้อมูลรถ</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">directions_bike</i>
-              <p>TABLE DRIVERS</p>
+              <p>ตารางข้อมูลพนักงานขับรถ</p>
             </a>
           </li>
         </ul>

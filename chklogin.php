@@ -21,7 +21,14 @@ if ($row!=0) {
             if ($_SESSION['status']=="user") {
                 ?>
                 <script>
-                window.location='index.php';
+                window.location='index_user.php';
+                </script>
+                <?php 
+            }
+            if ($_SESSION['status']=="driver") {
+                ?>
+                <script>
+                window.location='index_user.php';
                 </script>
                 <?php 
             }

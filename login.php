@@ -21,15 +21,15 @@ include("css.php");
                         <div class="bg-dark text-white">
                         <center><h3 style="margin: 15px">ระบบงานสารสนเทศ <br> การจองรถ <br> วิทยาลัยเทคนิคชลบุรี</h3></center>
                         </div>
-
-                        <img src="assets/img/download.png" class="mx-auto d-block" >
-                    
+                        <br>
+                        <img src="assets/img/download.png" class="mx-auto d-block" width="50%">
+                        <br>
                         <form action="chklogin.php" method="post" class="container">
                         <div class="form-group">
                             <label for="username">Username :</label>
-                            <input id="username" class="form-control" type="text" name="username" required><br>
+                            <input id="username" class="form-control" type="text" name="username" placeholder="ชื่อผู้ใช้งาน" required><br>
                             <label for="password">Password :</label>
-                            <input id="password" class="form-control" type="password" name="password" required>
+                            <input id="password" class="form-control" type="password" name="password" placeholder="รหัสผ่านผู้ใช้งาน" required>
                         </div>
                         
                         <?php
@@ -44,12 +44,16 @@ include("css.php");
                             <?php
                         }
                         ?>
-                        <br>
                         <div class="float-right">
                         <input type="submit" value="เข้าสู่ระบบ" class="btn btn-success">
-                        <a href="register.php" align="right"><input type="button" value="สมัครสมาชิก" class="btn btn-warning"></a>
                         </div>
                         </form>
+                        <div class="container text-center">
+                -------------------------------------------------------------<br>
+                            <h3> การเข้าใช้ระบบสารสนเทศการจองรถ </h3>
+                                ชื่อผู้ใช้งาน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
+                             รหัสผ่าน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
+                        </div>
                         <br>
                     </div>
                     </div>

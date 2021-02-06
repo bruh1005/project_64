@@ -10,7 +10,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="index_user.php">
+            <a class="nav-link" href="calendar.php">
               <i class="material-icons">dashboard</i>
               <p>CRS</p>
             </a>
@@ -18,13 +18,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="material-icons">bookmark_add</i>
-              <p>จองรถ</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="material-icons">bookmark_add</i>
-              <p>ยืนยันการจองรถ</p>
+              <p>รายงานการเส้นทางการเดินรถ</p>
             </a>
           </li>
         </ul>
