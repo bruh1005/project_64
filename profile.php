@@ -3,7 +3,7 @@ session_start();
 include('connect.php');
 include('css.php');
 include('menu_admin.php');
-include('script.php');
+
 
 $user_id = $_SESSION['user_id'];
 $sql="SELECT * FROM user WHERE user_id = $user_id";

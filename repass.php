@@ -25,11 +25,13 @@ include("script.php");
                         <br>
                         <img src="assets/img/download.png" class="mx-auto d-block" width="50%">
                         <br>
-                        <form action="chklogin.php" method="post" class="container">
+                        <form action="chkrename.php" method="post" class="container" id="passwordForm">
                         <div class="form-group">
                             <label for="username">ชื่อผู้ใช้งาน :</label>
                             <input id="username" class="form-control" type="text" name="username"  required><br>
-                            <label for="password">รหัสผ่านผู้ใช้งาน :</label>
+                            <label for="username">รหัสผ่านใหม่ :</label>
+                            <input id="username" class="form-control" type="password" name="username"  required><br>
+                            <label for="password">ยืนยันรหัสผ่านใหม่ :</label>
                             <input id="password" class="form-control" type="password" name="password" required>
                         </div>
                         <?php
@@ -37,7 +39,7 @@ include("script.php");
                             <div class="alert alert-danger text-center hide-it" role="alert">
                         <?php
                             if($_GET['error']==1){
-                                echo " รหัสผ่านไม่ถูกต้อง ";
+                                echo " ไม่มีข้อมูลผู้ใช้งานในระบบ ";
                             } 
                             ?>
                             </div>
@@ -46,20 +48,14 @@ include("script.php");
                         ?>
                         <div class="float-right">
                         <input type="submit" value="เข้าสู่ระบบ" class="btn btn-success"><br>
-                        <a href="repass.php" class="text-danger"> -- ลืมรหัสผ่าน --</a>
+                        <a href="http://"></a>
                         </div>
                         </form>
-                        <div class="container text-center">
-                -------------------------------------------------------------<br>
-                            <h3> การเข้าใช้ระบบสารสนเทศการจองรถ </h3>
-                                ชื่อผู้ใช้งาน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
-                             รหัสผ่าน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
-                        </div>
+                        
                         <br>
                     </div>
                     </div>
                 </div>
-
      </div>
  </div>
  <script src="assets/js/core/jquery.min.js"></script>

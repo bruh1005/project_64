@@ -1,8 +1,8 @@
 <?php
 include('connect.php');
 include('css.php');
-include('menu_admin.php');
-include('script.php');
+include('chkmenu.php');
+
  
 $sql="SELECT * FROM user ";
 $res=$conn->query($sql);

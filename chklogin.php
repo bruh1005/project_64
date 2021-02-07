@@ -18,20 +18,28 @@ if ($row!=0) {
                 </script>
                 <?php 
             }
-            if ($_SESSION['status']=="user") {
+            if ($_SESSION['status']=="officer") {
                 ?>
                 <script>
-                window.location='index_user.php';
+                window.location='index.php';
                 </script>
                 <?php 
             }
             if ($_SESSION['status']=="driver") {
                 ?>
                 <script>
-                window.location='index_user.php';
+                window.location='index.php';
                 </script>
                 <?php 
             }
+            if ($_SESSION['status']=="user") {
+                ?>
+                <script>
+                window.location='index.php';
+                </script>
+                <?php 
+            }
+            
         }
 else{
  header( "location:login.php?error=1" );

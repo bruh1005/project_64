@@ -1,8 +1,7 @@
 <?php
 include('connect.php');
 include('css.php');
-include('menu_admin.php');
-include('script.php');
+include('chkmenu.php');
  
 $sql="SELECT * FROM cars ";
 $res=$conn->query($sql);

@@ -10,7 +10,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link" href="calendar.php">
+            <a class="nav-link" href="fullcalendar.php">
               <i class="material-icons">dashboard</i>
               <p>CRS</p>
             </a>
