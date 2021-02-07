@@ -16,13 +16,13 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="ffullcalendar.php">
+            <a class="nav-link" href="fullcalendar.php">
               <i class="material-icons">event</i>
               <p>ตารางการจองรถ</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="insert_user_f.php">
               <i class="material-icons">person_add</i>
               <p>เพิ่มข้อมูลสมาชิก</p>
             </a>
