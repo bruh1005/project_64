@@ -23,11 +23,6 @@ $res=$conn->query($sql);
                 <br>
 
                 <div class="form-group">
-                <label for="usr_id">ID ผู้ใช้งาน:</label><br>
-                <input type="text" class="form-control" placeholder="ใส่ ID ผู้ใช้งาน" id="usr_id">
-                </div><br>
-
-                <div class="form-group">
                 <label for="usr">ชื่อผู้ใช้งาน:</label><br>
                 <input type="text" class="form-control" placeholder="ใส่ชื่อผู้ใช้งาน" id="usr">
                 </div><br>
