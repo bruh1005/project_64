@@ -4,8 +4,7 @@ include('css.php');
 include('menu_admin.php');
 include('script.php');
  
-$sql="SELECT * FROM user ";
-$res=$conn->query($sql);
+
 ?>
 
 <div class="content">
@@ -21,6 +20,11 @@ $res=$conn->query($sql);
                 
                 <form action="insert_user_sql.php" method=post >
                 <br>
+
+                <div class="form-group">
+                <label for="usr_id">ID ผู้ใช้งาน:</label><br>
+                <input type="text" class="form-control" placeholder="ใส่ ID ผู้ใช้งาน" id="usr_id">
+                </div><br>
 
                 <div class="form-group">
                 <label for="usr">ชื่อผู้ใช้งาน:</label><br>
