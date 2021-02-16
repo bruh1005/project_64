@@ -68,10 +68,14 @@ include('chkmenu.php');
 		</div>        
 	</div>
 	  <div class="modal-footer">
-	  <button type="submit" class="btn btn-primary" >Save</button>
+	  <button type="button" id="insert" class="btn btn-primary" >Save</button>
 	  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>        
 	</div>
 	</form>
   </div>
 </div>
 </div>
+
+<script>
+
+</script>

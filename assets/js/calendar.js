@@ -47,7 +47,9 @@ jQuery(document).ready(function(){
                   }
                 },
               dayClick: function() {
+                console.log('554');
                   jQuery('#modal-view-event-add').modal();
+                  alert('555');
               },
               eventClick: function(event, jsEvent, view) {
                       jQuery('.event-icon').html("<i class='fa fa-"+event.icon+"'></i>");

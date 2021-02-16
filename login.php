@@ -67,9 +67,6 @@ include("script.php");
     $(document).ready(function() {
         $(".hide-it").fadeOut(2000);
     });
-
-
-    
  </script>
 
  

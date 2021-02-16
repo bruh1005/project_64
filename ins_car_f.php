@@ -12,8 +12,8 @@ include('script.php');
         <div class="row">
         <div class="col-md-12">
             <div class="card">
-            <div class="card-header card-header-info">
-                <h4 class="card-title ">เพิ่มข้อมูลผู้ใช้งาน</h4>
+            <div class="card-header card-header">
+                <h4 class="card-title ">เพิ่มข้อมูลรถ</h4>
             </div>
            
             <div class="container card-body">
@@ -21,8 +21,8 @@ include('script.php');
                 <form class="was-validated" action="insert_user_sql.php" method= "post" >
                 <br>
                 <div class="form-group">
-                <label for="usr" class="bmd-label-floating">ชื่อผู้ใช้งาน:</label><br>
-                <input type="text" class="form-control" id="user" name="usr" required>
+                <label for="id_car" class="bmd-label-floating">ชื่อผู้ใช้งาน:</label><br>
+                <input type="text" class="form-control" id="id_car" name="id_car" required>
                 </div><br>
 
                 <div class="form-group">

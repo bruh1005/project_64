@@ -9,8 +9,8 @@
     Car Reservation System
   </title>
   <?php
-include("css.php");
-include("script.php");
+include("cssjs/css.php");
+include("cssjs/script.php");
 
 ?>
  <div class="container" style="margin-top:0px">

@@ -1,8 +1,6 @@
 <?php
 include('connect.php');
 
-
-
 $usr=$_POST['usr'];
 $pwd =$_POST['pwd'];
 $dep_id =$_POST['dep_id'];
@@ -12,9 +10,19 @@ $lname=$_POST['lname'];
 $phone =$_POST['phone'];
 $status=$_POST['status'];
 
-
-
-    $sql = "INSERT INTO `user`VALUES ('$usr','$pwd','$dep_id','$p_id','$fname','$lname','$phone','$status')";
+$sql2 = "select * from user where username = '$usr'";
+$res2 = $conn->query($sql2);
+$row2 = $res2->fetch_assoc();
+if($row2>0) {
+	?>
+        <script>
+        alert("มีผู้ใช้งาน Username นี้แล้ว");
+        window.history.back();
+        </script>
+        <?php 
+}
+else {
+	$sql = "INSERT INTO `user`VALUES ('','$usr','$pwd','$dep_id','$p_id','$fname','$lname','$phone','$status')";
 
     $result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
 
@@ -22,7 +30,7 @@ $status=$_POST['status'];
 	if ($result){
 		echo "<script type='text/javascript'>";
 		echo"alert('เพิ่มข้อมูลสำเร็จ');";
-	    echo"window.location = 'insert_user_f.php';";
+	    echo"window.location = 'tableuser.php';";
 		echo "</script>";
 		}
 		else {
@@ -32,11 +40,7 @@ $status=$_POST['status'];
 				echo"window.location = 'insert_user_f.php'; ";
 				echo"</script>";
 	}
-
-
-
-
-
+}
 
 
 ?>

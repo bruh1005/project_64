@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="ins_car_f.php">
               <i class="material-icons">design_services</i>
               <p>เพิ่มข้อมูลรถ</p>
             </a>
