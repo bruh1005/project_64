@@ -26,56 +26,42 @@ $row = mysqli_fetch_assoc($sql);
                 <div class="form-group">
                 <label for="usr" class="bmd-label-floating">ชื่อผู้ใช้งาน:</label><br>
                 <input type="text" class="form-control" name="usr" value="<?=$row['username']; ?>" required >
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
                 <div class="form-group">
                 <label for="pwd" class="bmd-label-floating">รหัสผ่าน:</label><br>
                 <input type="text" class="form-control" name="pwd" value="<?=$row['password']; ?>" required>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
                 <div class="form-group">
                 <label for="fname" class="bmd-label-floating">ชื่อ:</label>
                 <input type="text" class="form-control" name="fname" value="<?=$row['fname']; ?>" required>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
                 <div class="form-group">
                 <label for="fname" class="bmd-label-floating">นามสกุล:</label>
                 <input type="text" class="form-control" name="lname" value="<?=$row['lname']; ?>" required>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
                 <div class="form-group">
                 <label for="phone" class="bmd-label-floating">เบอร์โทรศัพท์:</label>
                 <input type="text" class="form-control" name="phone" value="<?=$row['phone']; ?>" required>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
                 <div class="form-group">
                 <label for="dep_id" class="bmd-label-floating">เลือกแผนก:</label>
                 <input type="hidden" id="chk" value="<?php echo $row['department_id'] ?>">
                 <select class="custom-select" name="dep_id"  required>
-            <?php
-                $sql1 = "SELECT * FROM department";
-                $res1 = mysqli_query($conn,$sql1);
-
-                $department_id = $row['department_id'];
-                $sqldep = "select department_name from department where  department_id = $department_id";
-                $resdep = mysqli_query($conn,$sqldep);
-                $rowdep = mysqli_fetch_assoc($resdep);
-
-            
-                while($row1 = mysqli_fetch_assoc($res1)){
-                    
-            ?>
-                <option id="<?=$row['department_id']; ?> " value="<?php echo $row1['dapartment_id'] ?>"><?php echo $row1['department_name'] ?></option>
-            <?php
+                    <?php
+                        $sqldep = "select * from department";
+                        $resdep = mysqli_query($conn,$sqldep);
+                        while($rowdep = mysqli_fetch_assoc($resdep)){       
+                    ?>
+                <option id="<?php echo $rowdep['department_id']; ?>" value="<?php echo $rowdep['dapartment_id'] ?>"><?php echo $rowdep['department_name'] ?></option>
+                <?php
                  }
-            ?>
+                ?>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div>
 
                 <div class="form-group">
@@ -87,7 +73,6 @@ $row = mysqli_fetch_assoc($sql);
                 <option value ="3">อาจารย์</option>
                 <option value ="4">เจ้าหน้าที่</option>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div>
 
                 <div class="form-group">
@@ -99,7 +84,6 @@ $row = mysqli_fetch_assoc($sql);
                 <option value='officer'>officer</option>
                 <option value='driver'>driver</option>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div>
 
                 <input class="btn btn-success btn-round" type="submit" value="เพิ่มสมาชิก">
