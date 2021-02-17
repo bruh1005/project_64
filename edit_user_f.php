@@ -50,39 +50,45 @@ $row = mysqli_fetch_assoc($sql);
 
                 <div class="form-group">
                 <label for="dep_id" class="bmd-label-floating">เลือกแผนก:</label>
-                <input type="hidden" id="chk" value="<?php echo $row['department_id'] ?>">
-                <select class="custom-select" name="dep_id"  required>
+                <input type="hidden" id="chkd" value="<?php echo $row['department_id'] ?>">
+                <select class="custom-select" name="dep_id" >
                     <?php
                         $sqldep = "select * from department";
                         $resdep = mysqli_query($conn,$sqldep);
                         while($rowdep = mysqli_fetch_assoc($resdep)){       
                     ?>
-                <option id="<?php echo $rowdep['department_id']; ?>" value="<?php echo $rowdep['dapartment_id'] ?>"><?php echo $rowdep['department_name'] ?></option>
+                <option id="<?php echo $rowdep['department_id']; ?>" value="<?php echo $rowdep['department_id'] ?>"><?php echo $rowdep['department_name'] ?></option>
                 <?php
-                 }
+                 };
                 ?>
                 </select>
                 </div>
 
                 <div class="form-group">
                 <label for="pos_id" class="bmd-label-floating">เลือกตำแหน่ง:</label>
-                <select class="custom-select" name="pos_id" required>
-                <option value="<?=$row['p_id']; ?>"><?=$row['p_id']; ?></option>
-                <option value ="1">ผู้อำนวยการ</option>
-                <option value ="2">รองผู้อำนวยการ</option>
-                <option value ="3">อาจารย์</option>
-                <option value ="4">เจ้าหน้าที่</option>
+                <!-- <input type="hidden" id="##" value="<?php echo $row['p_id'] ?>"> -->
+                <select class="custom-select" name="pos_id" >
+                    <?php
+                        $sqlpos = "select * from position";
+                        $respos = mysqli_query($conn,$sqlpos);
+                        while($rowpos = mysqli_fetch_assoc($respos)){       
+                    ?>
+                <option <?php if($row['p_id'] == $rowpos['p_id']){ echo 'selected'; } ?> value="<?php echo $rowpos['p_id'] ?>"><?php echo $rowpos['p_name'] ?></option>
+                <?php
+                 }
+                ?>
                 </select>
-                </div>
+                </div>              
 
                 <div class="form-group">
-                <label for="staus" class="bmd-label-floating">เลือกสถานะ:</label>
-                <select class="custom-select" name="status"  required>
-                <option value="<?=$row['status']; ?>"><?=$row['status']; ?></option>
-                <option value='admin'>admin</option>
-                <option value='user'>user</option>
-                <option value='officer'>officer</option>
-                <option value='driver'>driver</option>
+                <label for="status" class="bmd-label-floating">เลือกสถานะ:</label>
+                <input type="hidden" id="chks" value="<?php echo $row['status'] ?>">
+                <select class="browser-default custom-select" name="status"  required>
+                
+                <option id='admin' value='admin'>admin</option>
+                <option id='user' value='user'>user</option>
+                <option id='officer' value='officer'>officer</option>
+                <option id='driver' value='driver'>driver</option>
                 </select>
                 </div>
 
@@ -94,11 +100,26 @@ $row = mysqli_fetch_assoc($sql);
             </div>
             </div>
         </div>
+        </div>
+        </div>
 <script>
 
-$(document).ready(function(){
-        document.getElementById($('#chk').val()).selected = "true";
+    $(document).ready(function(){
+        document.getElementById($('#chkd').val()).selected = "true";
     });
+
+    $(document).ready(function(){
+        document.getElementById($('#chkp').val()).selected = "true";
+    });
+
+   
+
+    $(document).ready(function(){
+        document.getElementById($('#chks').val()).selected = "true";
+    });
+  
+
+
 
 
 </script>
