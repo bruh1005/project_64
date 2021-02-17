@@ -22,7 +22,7 @@ $row = $res->fetch_assoc();
            
             <div class="container card-body">
                 
-                <form  action="ins_car_sql.php" method= "post" >
+                <form  action="edit_car_sql.php" method= "post" >
                 <div class="form-group">
                 <label for="car_id" >หมายเลขทะเบียนรถ :</label><br>
                 <input type="text" class="form-control" id="car_id" name="car_id" value="<?php echo $row['car_id'] ?>" readonly>
@@ -40,31 +40,33 @@ $row = $res->fetch_assoc();
 
                 <div class="form-group">
                 <label for="province" >จังหวัด :</label>
+                <input type="hidden" id="chkp" value="<?php echo $row['province'] ?>">
                 <select class="browser-default custom-select" name="province" >
                     <?php 
                     $sqlp ="SELECT * FROM province ";
                     $resp = $conn->query($sqlp);
                     while($rowp=$resp->fetch_assoc()){ ?>
-                    <option value ="<?php echo $rowp['province_id'] ?>"><?php echo $rowp['province_name'] ?></option>
+                    <option id="<?php echo $rowp['province_id'] ?>" value ="<?php echo $rowp['province_id'] ?>"><?php echo $rowp['province_name'] ?></option>
                     <?php } ?>
                 </select>
                 </div><br>
 
                 <div class="form-group">
                 <label for="brand" >รุ่นยานพาหนะ :</label>
-                <input type="text" class="form-control" name="brand" >
+                <input type="text" class="form-control" name="brand" value="<?php echo $row['brand'] ?>">
                 </div><br>
                 
                 <div class="form-group">
                 <label for="capacity" >จำนวนที่นั่ง :</label>
-                <input type="text" class="form-control" name="capacity" >
+                <input type="text" class="form-control" name="capacity" value="<?php echo $row['capacity'] ?>">
                 </div><br>
 
                 <div class="form-group">
                 <label for="carstatus" >สถานะการใช้งาน :</label>
+                <input type="hidden" id="chks" value="<?php echo $row['carstatus'] ?>">
                 <select class="browser-default custom-select" name="carstatus" >
-                <option value ="ใช้งานปกติ">ใช้งานปกติ</option>
-                <option value ="ซ่อมบำรุง">ซ่อมบำรุง</option>
+                <option id="ใช้งานปกติ" value ="ใช้งานปกติ">ใช้งานปกติ</option>
+                <option id="ซ่อมบำรุง" value ="ซ่อมบำรุง">ซ่อมบำรุง</option>
                 </select>
                 </div>
 
@@ -83,6 +85,14 @@ $row = $res->fetch_assoc();
 
     $(document).ready(function(){
         document.getElementById($('#chk').val()).selected = "true";
+    });
+
+    $(document).ready(function(){
+        document.getElementById($('#chkp').val()).selected = "true";
+    });
+
+    $(document).ready(function(){
+        document.getElementById($('#chks').val()).selected = "true";
     });
 // $("#user").focusout(function(){
 //     var username = $("#user").val();

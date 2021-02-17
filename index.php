@@ -21,7 +21,7 @@ $row1 = $res1->fetch_assoc();
                   <div class="card-icon">
                     <i class="material-icons">perm_contact_calendar</i>
                   </div>
-                  <p class="card-category">Number of members</p>
+                  <p class="card-category">จำนวนข้อมูลผู้ใช้งาน</p>
                   <h3 class="card-title"> <?php echo $row['total1']; ?>
                     <small>people</small>
                   </h3>
@@ -36,11 +36,29 @@ $row1 = $res1->fetch_assoc();
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">directions_bus</i>
+                  </div>
+                  <p class="card-category">จำนวนรถทั้งหมด</p>
+                  <h3 class="card-title"><?php echo $row1['total2']; ?>
+                  <small>car</small>
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">departure_board</i> Of Chonburi Technical College
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
                     <i class="material-icons">directions_bus</i>
                   </div>
-                  <p class="card-category">Car number</p>
+                  <p class="card-category">ยานพาหนะที่พร้อมใช้งาน</p>
                   <h3 class="card-title"><?php echo $row1['total2']; ?>
                   <small>car</small>
                   </h3>
