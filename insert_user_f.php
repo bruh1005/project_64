@@ -36,7 +36,7 @@ include('script.php');
                 </div><br>
 
                 <div class="form-group">
-                <label for="fname" class="bmd-label-floating">นามสกุล:</label>
+                <label for="lname" class="bmd-label-floating">นามสกุล:</label>
                 <input type="text" class="form-control" name="lname" required>
                 </div><br>
 

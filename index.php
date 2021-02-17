@@ -2,6 +2,7 @@
 include('connect.php');
 include('css.php');
 include('chkmenu.php');
+include('script.php');
 
 $sql = "SELECT COUNT('user_id') as total1 FROM user ";
 $res = $conn->query($sql);
