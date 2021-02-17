@@ -23,7 +23,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="insert_user_f.php">
-              <i class="material-icons">person_add</i>
+              <i class="material-icons">design_services</i>
               <p>เพิ่มข้อมูลสมาชิก</p>
             </a>
           </li>
@@ -43,6 +43,12 @@
             <a class="nav-link" href="tablecars.php">
               <i class="material-icons">directions_bus_filled</i>
               <p>ตารางข้อมูลรถ</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">design_services</i>
+              <p>เพิ่มข้อมูลพนักงานขับรถ</p>
             </a>
           </li>
           <li class="nav-item ">

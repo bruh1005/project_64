@@ -3,7 +3,9 @@ include('connect.php');
 include('css.php');
 include('menu_admin.php');
 include('script.php');
- 
+
+$sql ="SELECT * FROM province ";
+$res = $conn->query($sql);
 
 ?>
 
@@ -12,86 +14,61 @@ include('script.php');
         <div class="row">
         <div class="col-md-12">
             <div class="card">
-            <div class="card-header card-header">
+            <div class="card-header card-header-info">
                 <h4 class="card-title ">เพิ่มข้อมูลรถ</h4>
             </div>
            
             <div class="container card-body">
                 
-                <form class="was-validated" action="insert_user_sql.php" method= "post" >
-                <br>
+                <form class="was-validated" action="ins_car_sql.php" method= "post" >
                 <div class="form-group">
-                <label for="id_car" class="bmd-label-floating">ชื่อผู้ใช้งาน:</label><br>
-                <input type="text" class="form-control" id="id_car" name="id_car" required>
-                </div><br>
+                <label for="car_id" class="bmd-label-floating">หมายเลขทะเบียนรถ :</label><br>
+                <input type="text" class="form-control" id="car_id" name="car_id" required>
+                </div>
 
                 <div class="form-group">
-                <label for="pwd" class="bmd-label-floating">รหัสผ่าน:</label><br>
-                <input type="password" class="form-control" name="pwd" required>
-                </div><br>
-
-                <div class="form-group">
-                <label for="fname" class="bmd-label-floating">ชื่อ:</label>
-                <input type="text" class="form-control" name="fname" required>
-                </div><br>
-
-                <div class="form-group">
-                <label for="fname" class="bmd-label-floating">นามสกุล:</label>
-                <input type="text" class="form-control" name="lname" required>
-                </div><br>
-
-                <div class="form-group">
-                <label for="phone" class="bmd-label-floating">เบอร์โทรศัพท์:</label>
-                <input type="text" class="form-control" name="phone" required>
-                </div><br>
-
-                <div class="form-group">
-                <label for="dep_id" class="bmd-label-floating">เลือกแผนก:</label>
-                <select class="custom-select" name="dep_id" required>
+                <label for="type" class="bmd-label-floating">ประเภทยานพาหนะ :</label>
+                <select class="custom-select" name="type" required>
                 <option value="">-----โปรดเลือก-----</option>
-                            <option value="1">แผนกช่างกลโรงงาน</option>
-                            <option value="2">แผนกช่างยนต์</option>
-							<option value="3">แผนกไฟฟ้ากำลัง</option>
-							<option value="4">แผนกช่างอิเล็กทรอนิกส์</option>
-							<option value="5">แผนกช่างเทคนิคคอมพิวเตอร์</option>
-							<option value="14">แผนกแผนกช่างเมคคาทรอนิกส์</option>
-							<option value="6">แผนกช่างก่อสร้าง</option>
-							<option value="7">แผนกช่างเชื่อมโลหะ</option>
-							<option value="8">แผนกช่างสถาปัตยกรรม</option>
-							<option value="9">แผนกโลจิสติกส์</option>
-							<option value="10">แผนกควบคุมและขนส่งระบบทางราง</option>
-							<option value="11">แผนกช่างเทคนิคอุตสาหกรรม</option>
-							<option value="12">แผนกช่างเขียนแบบเครื่องกล</option>
-							<option value="13">แผนกเทคโนโลยีสารสนเทศ</option>
+                <option value ="รถตู้">รถตู้</option>
+                <option value ="รถกะบะ">รถกะบะ</option>
+                <option value ="รถ6ล้อ">รถ6ล้อ</option>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
+                <div class="invalid-feedback">กรุณาเลือกประเภทยานพาหนะ !!!!</div>
                 </div>
 
                 <div class="form-group">
-                <label for="pos_id" class="bmd-label-floating">เลือกตำแหน่ง:</label>
-                <select class="custom-select" name="pos_id" required>
+                <label for="province" class="bmd-label-floating">จังหวัด :</label>
+                <select class="custom-select js-example-basic-single" name="province" required>
                 <option value="">-----โปรดเลือก-----</option>
-                <option value ="1">ผู้อำนวยการ</option>
-                <option value ="2">รองผู้อำนวยการ</option>
-                <option value ="3">อาจารย์</option>
-                <option value ="4">เจ้าหน้าที่</option>
+                    <?php while($row=$res->fetch_assoc()){ ?>
+                    <option value ="<?php echo $row['province_id'] ?>"><?php echo $row['province_name'] ?></option>
+                    <?php } ?>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
+                <div class="invalid-feedback">กรุณาเลือกประเภทยานพาหนะ !!!!</div>
                 </div>
 
                 <div class="form-group">
-                <label for="staus" class="bmd-label-floating">เลือกสถานะ:</label>
-                <select class="custom-select" name="status" required>
-                <option value="">-----โปรดเลือกสถานะ-----</option>
-                <option value='admin'>admin</option>
-                <option value='user'>user</option>
-                <option value='officer'>officer</option>
-                <option value='driver'>driver</option>
+                <label for="brand" class="bmd-label-floating">ยี่ห้อยานพาหนะ :</label>
+                <input type="text" class="form-control" name="brand" required>
+                </div><br>
+                
+                <div class="form-group">
+                <label for="capacity" class="bmd-label-floating">จำนวนที่นั่ง :</label>
+                <input type="text" class="form-control" name="capacity" required>
+                </div><br>
+
+                <div class="form-group">
+                <label for="carstatus" class="bmd-label-floating">สถานะการใช้งาน :</label>
+                <select class="custom-select" name="carstatus" required>
+                <option value="">-----โปรดเลือก-----</option>
+                <option value ="ใช้งานปกติ">ใช้งานปกติ</option>
+                <option value ="ซ่อมบำรุง">ซ่อมบำรุง</option>
                 </select>
-                <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
+                <div class="invalid-feedback">กรุณาเลือกสถานะการใช้งาน !!!!</div>
                 </div>
 
-                <input class="btn btn-success btn-round" type="submit" value="เพิ่มสมาชิก">
+                <input class="btn btn-success btn-round" type="submit" value="เพิ่มยานพาหนะ">
                 </form>
 
 
@@ -100,6 +77,9 @@ include('script.php');
             </div>
         </div>
 <script>
+    $(document).ready(function() {
+    $('.js-example-basic-single').select2();
+    });
 // $("#user").focusout(function(){
 //     var username = $("#user").val();
 //     $.ajax({

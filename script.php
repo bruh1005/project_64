@@ -44,4 +44,5 @@
   <script src="assets/demo/demo.js"></script>
 
   <script src="assets/js/repass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+  <script src="assets/js/calendar.js"></script>
+  <script src="assets/js/select2.min.js"></script>

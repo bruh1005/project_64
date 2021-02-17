@@ -2,6 +2,7 @@
 include('connect.php');
 include('css.php');
 include('chkmenu.php');
+include('script.php');
  
 $sql="SELECT * FROM cars ";
 $res=$conn->query($sql);
@@ -33,26 +34,36 @@ $res=$conn->query($sql);
                 <table id="example" class="table table-striped table-bordered" >
                 <thead class=" text-primary">
                     <tr>
-                        <th>User_id </th>
-                        <th>Username </th>
-                        <th>Password </th>
-                        <th>Department </th>
-                        <th>Position</th>
-                        <th>Position</th>
-                        <th>Position</th>
+                        <th>ทะเบียนรถ </th>
+                        <th>จังหวัด </th>
+                        <th>ประเภทยานพาหนะ </th>
+                        <th>ยี่ห้อยานพาหนะ </th>
+                        <th>จำนวนที่นั่ง</th>
+                        <th>สถานะการใช้งาน</th>
+                        <th>Edit</th>
+                        <th>Delect</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php while($row=$res->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
-                        <td><?php echo $row['']; ?></td>
+                        <td><?php echo $row['car_id']; ?></td>
+                        <td><?php echo $row['province']; ?></td>
+                        <td><?php echo $row['type']; ?></td>
+                        <td><?php echo $row['brand']; ?></td>
+                        <td><?php echo $row['capacity']; ?></td>
+                        <td><?php echo $row['carstatus']; ?></td>
+                        <td><a href="edit_car_f.php?car_id=<?php echo $row['car_id']; ?>">
+                            <button class="btn btn-info" type="submit">
+                            <i class="material-icons">mode</i>
+                            EDIT</button></a>
+                        </td>
+                        <td><a href="delect_car.php?car_id=<?php echo $row['car_id']; ?>">
+                            <button class="btn btn-danger" type="submit">
+                            <i class="material-icons">delete_forever</i>
+                            DELECT</button></a>
+                        </td>
                       
                     </tr>
                     <?php } ?>

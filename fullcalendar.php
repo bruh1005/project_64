@@ -2,6 +2,7 @@
 include('connect.php');
 include('css.php');
 include('chkmenu.php');
+include('script.php');
 ?>
 
 <div class="container p-5">
