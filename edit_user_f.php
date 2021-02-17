@@ -31,7 +31,7 @@ $row = mysqli_fetch_assoc($sql);
 
                 <div class="form-group">
                 <label for="pwd" class="bmd-label-floating">รหัสผ่าน:</label><br>
-                <input type="password" class="form-control" name="pwd" value="<?=$row['password']; ?>" required>
+                <input type="text" class="form-control" name="pwd" value="<?=$row['password']; ?>" required>
                 <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div><br>
 
@@ -55,28 +55,22 @@ $row = mysqli_fetch_assoc($sql);
 
                 <div class="form-group">
                 <label for="dep_id" class="bmd-label-floating">เลือกแผนก:</label>
+                <input type="hidden" id="chk" value="<?php echo $row['department_id'] ?>">
                 <select class="custom-select" name="dep_id"  required>
             <?php
                 $sql1 = "SELECT * FROM department";
                 $res1 = mysqli_query($conn,$sql1);
-                $rowdep1 = mysqli_fetch_assoc($res1);
 
-                $dep_id =$row['department_id'] ;
-                $sqldep = "SELECT department_name FROM department WHERE department_id =$dep_id ";
-                $resdep=mysqli_query($conn,$sqldep);
+                $department_id = $row['department_id'];
+                $sqldep = "select department_name from department where  department_id = $department_id";
+                $resdep = mysqli_query($conn,$sqldep);
                 $rowdep = mysqli_fetch_assoc($resdep);
-                
+
             
-                
-            ?>
-                <option value="<?=$row['department_id']; ?>"><? $row['department_id'] ?></option>
-                
-            <?php
-                
-                 while($row1 = mysqli_fetch_assoc($res1)){
+                while($row1 = mysqli_fetch_assoc($res1)){
                     
             ?>
-                <option value="<?php echo $row1['dapartment_id'] ?>"><?php echo $row1['department_name'] ?></option>
+                <option id="<?=$row['department_id']; ?> " value="<?php echo $row1['dapartment_id'] ?>"><?php echo $row1['department_name'] ?></option>
             <?php
                  }
             ?>
@@ -117,16 +111,10 @@ $row = mysqli_fetch_assoc($sql);
             </div>
         </div>
 <script>
-// $("#user").focusout(function(){
-//     var username = $("#user").val();
-//     $.ajax({
-//     type: "POST",
-//     url: "chkusr.php",
-//     data:{ name: username },
-//     success: function(result) {
-//     }
-//     });
-    
-// });
+
+$(document).ready(function(){
+        document.getElementById($('#chk').val()).selected = "true";
+    });
+
 
 </script>
