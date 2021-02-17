@@ -57,7 +57,7 @@ $res=$conn->query($sql);
                         <td><?php echo $row['lname']; ?></td>
                         <td><?php echo $row['phone']; ?></td>
                         <td><?php echo $row['status']; ?></td>
-                        <td><a href="edit_std_f.jsp?user_id=<?php echo $row['user_id']; ?>">
+                        <td><a href="edit_user_f.php?user_id=<?php echo $row['user_id']; ?>">
                             <button class="btn btn-info" type="submit">
                             <i class="material-icons">mode</i>
                             EDIT</button></a>
@@ -65,7 +65,7 @@ $res=$conn->query($sql);
                         <td><a href="delect_user.php?user_id=<?php echo $row['user_id']; ?>">
                             <button class="btn btn-danger" type="submit">
                             <i class="material-icons">delete_forever</i>
-                            DELECT</button></a>
+                            DELETE</button></a>
                         </td>
                     
                       

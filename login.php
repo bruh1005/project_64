@@ -44,7 +44,7 @@ include("script.php");
                             <?php
                         }
                         ?>
-                        <div class="float-right">
+                        <div class="container text-center">
                         <input type="submit" value="เข้าสู่ระบบ" class="btn btn-success"><br>
                         <a href="repass.php" class="text-danger"> -- ลืมรหัสผ่าน --</a>
                         </div>
