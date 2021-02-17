@@ -46,10 +46,14 @@ $res=$conn->query($sql);
                 </thead>
                 <tbody>
                 <?php while($row=$res->fetch_assoc()) {
+                    $province=$row['province'];
+                    $sqlp="select * from province where province_id=$province";
+                    $resp=$conn->query($sqlp);
+                    $rowp=$resp->fetch_assoc();
                     ?>
                     <tr>
                         <td><?php echo $row['car_id']; ?></td>
-                        <td><?php echo $row['province']; ?></td>
+                        <td><?php echo $rowp['province_name']; ?></td>
                         <td><?php echo $row['type']; ?></td>
                         <td><?php echo $row['brand']; ?></td>
                         <td><?php echo $row['capacity']; ?></td>
