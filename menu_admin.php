@@ -46,13 +46,13 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="insert_driver_f.php">
               <i class="material-icons">design_services</i>
               <p>เพิ่มข้อมูลพนักงานขับรถ</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="tabledriver.php">
               <i class="material-icons">directions_bike</i>
               <p>ตารางข้อมูลพนักงานขับรถ</p>
             </a>

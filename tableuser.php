@@ -23,17 +23,17 @@ $res=$conn->query($sql);
                 <table id="example" class="table table-striped table-bordered" >
                 <thead class=" text-primary">
                     <tr>
-                        <th>User_id </th>
-                        <th>Username </th>
-                        <th>Password </th>
-                        <th>Department </th>
-                        <th>Position</th>
-                        <th>Fname</th>
-                        <th>Lname</th>
-                        <th>Telephone</th>
-                        <th>Status</th>
-                        <th>Edit</th>
-                        <th>Delect</th>
+                        <th>หมายเลขผู้ใช้ </th>
+                        <th>ชื่อผู้ใช้ </th>
+                        <th>รหัสผ่าน </th>
+                        <th>แผนก </th>
+                        <th>ตำแหน่ง</th>
+                        <th>ชื่อ</th>
+                        <th>นามสกุล</th>
+                        <th>เบอร์โทรศัพท์</th>
+                        <th>สถานะ</th>
+                        <th>แก้ไข</th>
+                        <th>ลบ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +63,7 @@ $res=$conn->query($sql);
                             <i class="material-icons">mode</i>
                             EDIT</button></a>
                         </td>
-                        <td><a href="delect_user.php?user_id=<?php echo $row['user_id']; ?>">
+                        <td><a href="delete_user.php?user_id=<?php echo $row['user_id']; ?>">
                             <button class="btn btn-danger" type="submit">
                             <i class="material-icons">delete_forever</i>
                             DELETE</button></a>
