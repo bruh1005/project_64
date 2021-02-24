@@ -21,8 +21,9 @@ $row = mysqli_fetch_assoc($sql);
            
             <div class="container card-body">
                 
-                <form class="was-validated" action="edit_user_sql.php?user_id=<?=$row['user_id']; ?>" method= "post" >
+                <form class="was-validated" action="edit_user_sql.php" method= "post" >
                 <br>
+                <input type="hidden" name="user_id" value="<?=$row['user_id']; ?>">
                 <div class="form-group">
                 <label for="usr" class="bmd-label-floating">ชื่อผู้ใช้งาน:</label><br>
                 <input type="text" class="form-control" name="usr" value="<?=$row['username']; ?>" required >
@@ -92,7 +93,7 @@ $row = mysqli_fetch_assoc($sql);
                 </select>
                 </div>
 
-                <input class="btn btn-success btn-round" type="submit" value="เพิ่มสมาชิก">
+                <input class="btn btn-success btn-round" type="submit" value="ยืนยัน">
                 </form>
 
 
