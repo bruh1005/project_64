@@ -21,9 +21,7 @@ $phone =$_POST['phone'];
 // 				WHERE user_id = '$user_id'
 				
 
-$sql = "
-
-                UPDATE  user  SET    username ='$usr',
+$sql = "UPDATE  user  SET    username ='$usr',
                                      password ='$pwd',
                                      department_id ='$dep_id',
                                      p_id ='$p_id',

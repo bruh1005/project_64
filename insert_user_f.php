@@ -55,14 +55,14 @@ include('script.php');
                 <select class="custom-select" name="dep_id" required>
                 <option value="">-----โปรดเลือก-----</option>
                 <?php
-      $sql1 = "SELECT * FROM department";
-      $res1 = mysqli_query($conn,$sql1);
+                $sql1 = "SELECT * FROM department";
+                $res1 = mysqli_query($conn,$sql1);
 
-      while($row1 = mysqli_fetch_assoc($res1)){?>
-        <option value="<?php echo $row1['department_id'] ?>"><?php echo $row1['department_name'] ?></option>
-      <?php
-      }
-      ?>
+                while($row1 = mysqli_fetch_assoc($res1)){?>
+                  <option value="<?php echo $row1['department_id'] ?>"><?php echo $row1['department_name'] ?></option>
+                <?php
+                }
+                ?>
                 </select>
                 <div class="invalid-feedback">กรุณากรอกข้อมูล !!!!</div>
                 </div>
