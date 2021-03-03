@@ -23,16 +23,26 @@ $res=$conn->query($sql);
                 <table id="example" class="table table-striped table-bordered" >
                 <thead class=" text-primary">
                     <tr>
+<<<<<<< HEAD
                         <th>รหัสผู้ใช้งาน </th>
                         <th>ชื่อผู้ใช้งาน </th>
+=======
+                        <th>หมายเลขผู้ใช้ </th>
+                        <th>ชื่อผู้ใช้ </th>
+>>>>>>> a8dffce6ec8eee3a37d6a211d5d13db9b7226832
                         <th>รหัสผ่าน </th>
                         <th>แผนก </th>
                         <th>ตำแหน่ง</th>
                         <th>ชื่อ</th>
                         <th>นามสกุล</th>
+<<<<<<< HEAD
                         <th>เบอรืโทรศัพท์</th>
                         <th>สถาานะการใช้งาน</th>
                         <th>สถาานะการเปลี่ยนรหัส</th>
+=======
+                        <th>เบอร์โทรศัพท์</th>
+                        <th>สถานะ</th>
+>>>>>>> a8dffce6ec8eee3a37d6a211d5d13db9b7226832
                         <th>แก้ไข</th>
                         <th>ลบ</th>
                     </tr>
@@ -65,7 +75,7 @@ $res=$conn->query($sql);
                             <i class="material-icons">vpn_key</i>
                             </button></a>
                         </td>
-                        <td><a href="delect_user.php?user_id=<?php echo $row['user_id']; ?>">
+                        <td><a href="delete_user.php?user_id=<?php echo $row['user_id']; ?>">
                             <button class="btn btn-danger" type="submit">
                             <i class="material-icons">delete_forever</i>
                             </button></a>

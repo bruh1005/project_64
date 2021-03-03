@@ -35,32 +35,32 @@ $row = $res->fetch_assoc();
                     <p></p>
                     <table class="table table-borderless">
                         <tr>
-                            <td align="right"><h4 class="card-title">Uesrname :</h4></td>
+                            <td align="center"><h4 class="card-title">Uesrname :</h4></td>
                             <td><h4><?php echo $row['username'] ?></h4></td>
                         </tr>
                         <tr>
-                            <td align="right"><h4 class="card-title">Password : </h4></td>
-                            <td><h4><?php echo $row['password'] ?></h4></td>
+                            <td align="center"><h4 class="card-title">Password : </h4></td>
+                            <td><h4>!Your Password!</h4></td>
                         </tr>
                         <tr>
-                            <td align="right"><h4 class="card-title">Fristname : </h4></td>
+                            <td align="center"><h4 class="card-title">Fristname : </h4></td>
                             <td><h4><?php echo $row['fname'] ?></h4></td>
                         </tr>
                         <tr>
-                            <td align="right"><h4 class="card-title">Lastname : </h4></td>
+                            <td align="center"><h4 class="card-title">Lastname : </h4></td>
                             <td><h4><?php echo $row['lname'] ?></h4></td>
                         </tr>
                         <tr>
-                            <td align="right"><h4 class="card-title">Department : </h4></td>
+                            <td align="center"><h4 class="card-title">Department : </h4></td>
                             <td><h4><?php echo $row2['department_name'] ?></h4></td>
                         </tr>
 
                         <tr>
-                            <td align="right"><h4 class="card-title">Position : </h4></td>
+                            <td align="center"><h4 class="card-title">Position : </h4></td>
                             <td><h4><?php echo $row3['p_name'] ?></h4></td>
                         </tr>
                         <tr>
-                            <td align="right"><h4 class="card-title">Telahphone : </h4></td>
+                            <td align="center"><h4 class="card-title">Telahphone : </h4></td>
                             <td><h4><?php echo $row['phone'] ?></h4></td>
                         </tr>
                     </table>
