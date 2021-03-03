@@ -9,22 +9,46 @@
 
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index_user.php">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="index.php">
               <i class="material-icons">dashboard</i>
               <p>CRS</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="fullcalendar.php">
-              <i class="material-icons">bookmark_add</i>
-              <p>จองรถ</p>
+              <i class="material-icons">event</i>
+              <p>ตารางการจองรถ</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="#">
-              <i class="material-icons">bookmark_add</i>
-              <p>ยืนยันการจองรถ</p>
+              <i class="material-icons">person_add</i>
+              <p>เพิ่มข้อมูลสมาชิก</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="tableuser.php">
+              <i class="material-icons">contact_page</i>
+              <p>ตารางข้อมูลสมาชิก</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">design_services</i>
+              <p>เพิ่มข้อมูลรถ</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="tablecars.php">
+              <i class="material-icons">directions_bus_filled</i>
+              <p>ตารางข้อมูลรถ</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">directions_bike</i>
+              <p>ตารางข้อมูลพนักงานขับรถ</p>
             </a>
           </li>
         </ul>
@@ -36,7 +60,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Car reservation system </a>
+            <a class="navbar-brand" href="javascript:;">Car reservation system</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -64,7 +88,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="profile.php">Profile </a>
+                  <a class="dropdown-item" href="profile.php">Profile  </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="logout.php">Log out</a>
                 </div>

@@ -14,12 +14,6 @@ session_start();
     if (isset($_SESSION['username'])!="") {
         $username=$_SESSION['username'];
     }
-    if (isset($_SESSION['fname'])!="") {
-        $fname=$_SESSION['fname'];
-    }
-    if (isset($_SESSION['lname'])!="") {
-        $lname=$_SESSION['lname'];
-    }
     if (isset($_SESSION['status'])!="") {
         $status=$_SESSION['status'];
     }

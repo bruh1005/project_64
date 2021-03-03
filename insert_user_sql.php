@@ -22,7 +22,7 @@ if($row2>0) {
         <?php 
 }
 else {
-	$sql = "INSERT INTO `user`VALUES ('','$usr','$pwd','$dep_id','$p_id','$fname','$lname','$phone','$status','ยังไม่ได้เปลี่ยน')";
+	$sql = "INSERT INTO `user`VALUES ('','$usr','$pwd','$dep_id','$p_id','$fname','$lname','$phone','$status')";
 
     $result = mysqli_query($conn, $sql) or die ("Error in query: $sql " . mysqli_error());
 

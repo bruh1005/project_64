@@ -9,12 +9,9 @@
     Car Reservation System
   </title>
   <?php
-
-session_start();
-include("connect.php");
 include("css.php");
-include("script.php");
- ?>
+
+?>
  <div class="container" style="margin-top:0px">
      <div class="row">
          <div class="col-md-4"></div>
@@ -22,31 +19,52 @@ include("script.php");
                     <div class="col-md-8">
                         <div class="card">
                         <div class="bg-dark text-white">
-                        <center><h3 style="margin: 15px">ระบบงานสารสนเทศ <br> การจองรถ <br> แก้ไขรหัสผ่าน</h3></center>
+                        <center><h3 style="margin: 15px">ระบบงานสารสนเทศ <br> การจองรถ <br> วิทยาลัยเทคนิคชลบุรี</h3></center>
                         </div>
                         <br>
                         <img src="assets/img/download.png" class="mx-auto d-block" width="50%">
                         <br>
-                        <form action="chkloginp.php" method="post" class="container">
+                        <form action="chkrename.php" method="post" class="container" id="passwordForm">
                         <div class="form-group">
-                        <input type="hidden" name="user_id" value="<?php echo $user_id ?>">
-                            <label for="password1">รหัสผ่านใหม่ :</label>
-                            <input id="password1" class="form-control" type="type" name="password1" placeholder="รหัสผ่านใหม่" required><br>
-                            <label for="password2">ยืนยันรหัสผ่านใหม่ :</label>
-                            <input id="password2" class="form-control" type="type" name="password2" placeholder="ยืนยันรหัสผ่านใหม่" required>
-                        <br>
-                        <div class="container text-right">
-                        <input type="submit" value="แก้ไขรหัสผ่าน" class="btn btn-success"><br>
+                            <label for="username">ชื่อผู้ใช้งาน :</label>
+                            <input id="username" class="form-control" type="text" name="username"  required><br>
+                            <label for="username">รหัสผ่านใหม่ :</label>
+                            <input id="username" class="form-control" type="password" name="username"  required><br>
+                            <label for="password">ยืนยันรหัสผ่านใหม่ :</label>
+                            <input id="password" class="form-control" type="password" name="password" required>
+                        </div>
+                        <?php
+                        if($_GET['error']!=null){ ?>
+                            <div class="alert alert-danger text-center hide-it" role="alert">
+                        <?php
+                            if($_GET['error']==1){
+                                echo " ไม่มีข้อมูลผู้ใช้งานในระบบ ";
+                            } 
+                            ?>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                        <div class="float-right">
+                        <input type="submit" value="เข้าสู่ระบบ" class="btn btn-success"><br>
+                        <a href="http://"></a>
                         </div>
                         </form>
+                        
                         <br>
                     </div>
                     </div>
                 </div>
-
      </div>
  </div>
  <script src="assets/js/core/jquery.min.js"></script>
+ <script>
+    $(document).ready(function() {
+        $(".hide-it").fadeOut(2000);
+    });
 
+
+    
+ </script>
 
  

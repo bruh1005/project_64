@@ -28,13 +28,10 @@ include("script.php");
                         <form action="chklogin.php" method="post" class="container">
                         <div class="form-group">
                             <label for="username">ชื่อผู้ใช้งาน :</label>
-                            <input id="username" class="form-control" type="text" name="username" placeholder="ชื่อผู้ใช้งาน (รหัสบัตรประชาชน)" required><br>
-                        </div>
-                        <div class="form-group">  
+                            <input id="username" class="form-control" type="text" name="username"  required><br>
                             <label for="password">รหัสผ่านผู้ใช้งาน :</label>
-                            <input id="password" class="form-control" type="password" name="password" placeholder="รหัสผ่าน (รหัสบัตรประชาชน)" required>
+                            <input id="password" class="form-control" type="password" name="password" required>
                         </div>
-                        
                         <?php
                         if($_GET['error']!=null){ ?>
                             <div class="alert alert-danger text-center hide-it" role="alert">
@@ -46,11 +43,18 @@ include("script.php");
                             </div>
                             <?php
                         }
-                        ?><br>
-                        <div class="container text-right">
+                        ?>
+                        <div class="container text-center">
                         <input type="submit" value="เข้าสู่ระบบ" class="btn btn-success"><br>
+                        <a href="repass.php" class="text-danger"> -- ลืมรหัสผ่าน --</a>
                         </div>
                         </form>
+                        <div class="container text-center">
+                -------------------------------------------------------------<br>
+                            <h3> การเข้าใช้ระบบสารสนเทศการจองรถ </h3>
+                                ชื่อผู้ใช้งาน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
+                             รหัสผ่าน : ใช้หมายเลขบัตรประชาชนในการล็อกอิน 
+                        </div>
                         <br>
                     </div>
                     </div>
@@ -63,15 +67,6 @@ include("script.php");
     $(document).ready(function() {
         $(".hide-it").fadeOut(2000);
     });
- 
-    $(".reveal").on('click',function() {
-    var $pwd = $(".pwd");
-    if ($pwd.attr('type') === 'password') {
-        $pwd.attr('type', 'text');
-    } else {
-        $pwd.attr('type', 'password');
-    }
-});
  </script>
 
  

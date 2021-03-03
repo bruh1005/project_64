@@ -18,7 +18,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="fullcalendar.php">
               <i class="material-icons">event</i>
-              <p>จัดการการจองรถ</p>
+              <p>ตารางการจองรถ</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -30,7 +30,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="tableuser.php">
               <i class="material-icons">contact_page</i>
-              <p>จัดการข้อมูลสมาชิก</p>
+              <p>ตารางข้อมูลสมาชิก</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -42,7 +42,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="tablecars.php">
               <i class="material-icons">directions_bus_filled</i>
-              <p>จัดการข้อมูลรถ</p>
+              <p>ตารางข้อมูลรถ</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -54,10 +54,9 @@
           <li class="nav-item ">
             <a class="nav-link" href="tabledriver.php">
               <i class="material-icons">directions_bike</i>
-              <p>จัดการข้อมูลพนักงานขับรถ</p>
+              <p>ตารางข้อมูลพนักงานขับรถ</p>
             </a>
           </li>
-          
         </ul>
       </div>
     </div>
@@ -67,7 +66,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;"><h2>ระบบสารสนเทศการจองรถ</h2></a>
+            <a class="navbar-brand" href="javascript:;">Car reservation system</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
