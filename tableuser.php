@@ -23,17 +23,18 @@ $res=$conn->query($sql);
                 <table id="example" class="table table-striped table-bordered" >
                 <thead class=" text-primary">
                     <tr>
-                        <th>User_id </th>
-                        <th>Username </th>
-                        <th>Password </th>
-                        <th>Department </th>
-                        <th>Position</th>
-                        <th>Fname</th>
-                        <th>Lname</th>
-                        <th>Telephone</th>
-                        <th>Status</th>
-                        <th>Edit</th>
-                        <th>Delect</th>
+                        <th>รหัสผู้ใช้งาน </th>
+                        <th>ชื่อผู้ใช้งาน </th>
+                        <th>รหัสผ่าน </th>
+                        <th>แผนก </th>
+                        <th>ตำแหน่ง</th>
+                        <th>ชื่อ</th>
+                        <th>นามสกุล</th>
+                        <th>เบอรืโทรศัพท์</th>
+                        <th>สถาานะการใช้งาน</th>
+                        <th>สถาานะการเปลี่ยนรหัส</th>
+                        <th>แก้ไข</th>
+                        <th>ลบ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,15 +59,16 @@ $res=$conn->query($sql);
                         <td><?php echo $row['lname']; ?></td>
                         <td><?php echo $row['phone']; ?></td>
                         <td><?php echo $row['status']; ?></td>
-                        <td><a href="edit_user_f.php?user_id=<?php echo $row['user_id']; ?>">
-                            <button class="btn btn-info" type="submit">
-                            <i class="material-icons">mode</i>
-                            EDIT</button></a>
+                        <td><?php echo $row['statuspass']; ?></td>
+                        <td><a href="edit_userp_f.php?user_id=<?php echo $row['user_id']; ?>">
+                            <button class="btn btn-warning" type="submit">
+                            <i class="material-icons">vpn_key</i>
+                            </button></a>
                         </td>
                         <td><a href="delect_user.php?user_id=<?php echo $row['user_id']; ?>">
                             <button class="btn btn-danger" type="submit">
                             <i class="material-icons">delete_forever</i>
-                            DELETE</button></a>
+                            </button></a>
                         </td>
                     
                       
